@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF355F3123CD6B7900088F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F3023CD6B7900088F94 /* AppDelegate.swift */; };
+		DF355F3323CD6B7900088F94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F3223CD6B7900088F94 /* SceneDelegate.swift */; };
+		DF355F3523CD6B7900088F94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F3423CD6B7900088F94 /* ViewController.swift */; };
+		DF355F3823CD6B7900088F94 /* ArticleListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF355F3623CD6B7900088F94 /* ArticleListViewController.storyboard */; };
+		DF355F3A23CD6B7A00088F94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF355F3923CD6B7A00088F94 /* Assets.xcassets */; };
+		DF355F3D23CD6B7A00088F94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF355F3B23CD6B7A00088F94 /* LaunchScreen.storyboard */; };
+		DF355F4823CD6B7A00088F94 /* MartianTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F4723CD6B7A00088F94 /* MartianTranslatorTests.swift */; };
+		DF355F5323CD6B7A00088F94 /* MartianTranslatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F5223CD6B7A00088F94 /* MartianTranslatorUITests.swift */; };
+		DF355F6423CD6CB900088F94 /* ArticleListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F6323CD6CB900088F94 /* ArticleListProtocols.swift */; };
+		DF355F6623CD6CCD00088F94 /* ArticleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F6523CD6CCD00088F94 /* ArticleListModel.swift */; };
+		DF355F6823CD6D6200088F94 /* ArticleListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F6723CD6D6200088F94 /* ArticleListInteractor.swift */; };
+		DF355F6A23CD6D7200088F94 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F6923CD6D7200088F94 /* ArticleListViewController.swift */; };
+		DF355F6C23CD6D8D00088F94 /* ArticleListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F6B23CD6D8D00088F94 /* ArticleListPresenter.swift */; };
+		DF355F6E23CD6DAF00088F94 /* ArticleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F6D23CD6DAF00088F94 /* ArticleProtocols.swift */; };
+		DF355F7023CD6DB900088F94 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F6F23CD6DB900088F94 /* ArticleModel.swift */; };
+		DF355F7223CD6DC800088F94 /* ArticleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7123CD6DC800088F94 /* ArticleInteractor.swift */; };
+		DF355F7423CD6DD500088F94 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7323CD6DD500088F94 /* ArticleViewController.swift */; };
+		DF355F7623CD6DE200088F94 /* ArticlePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7523CD6DE200088F94 /* ArticlePresenter.swift */; };
+		DF355F7823CD72EB00088F94 /* ArticleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7723CD72EB00088F94 /* ArticleRouter.swift */; };
+		DF355F7A23CD72FC00088F94 /* ArticleListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7923CD72FC00088F94 /* ArticleListRouter.swift */; };
+		DF355F7D23D542E200088F94 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7C23D542E200088F94 /* NavigationHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF355F4423CD6B7A00088F94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF355F2523CD6B7900088F94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF355F2C23CD6B7900088F94;
+			remoteInfo = MartianTranslator;
+		};
+		DF355F4F23CD6B7A00088F94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF355F2523CD6B7900088F94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF355F2C23CD6B7900088F94;
+			remoteInfo = MartianTranslator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF355F2D23CD6B7900088F94 /* MartianTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MartianTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF355F3023CD6B7900088F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF355F3223CD6B7900088F94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DF355F3423CD6B7900088F94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF355F3723CD6B7900088F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ArticleListViewController.storyboard; sourceTree = "<group>"; };
+		DF355F3923CD6B7A00088F94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF355F3C23CD6B7A00088F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF355F3E23CD6B7A00088F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF355F4323CD6B7A00088F94 /* MartianTranslatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MartianTranslatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF355F4723CD6B7A00088F94 /* MartianTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartianTranslatorTests.swift; sourceTree = "<group>"; };
+		DF355F4923CD6B7A00088F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF355F4E23CD6B7A00088F94 /* MartianTranslatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MartianTranslatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF355F5223CD6B7A00088F94 /* MartianTranslatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartianTranslatorUITests.swift; sourceTree = "<group>"; };
+		DF355F5423CD6B7A00088F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF355F6323CD6CB900088F94 /* ArticleListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListProtocols.swift; sourceTree = "<group>"; };
+		DF355F6523CD6CCD00088F94 /* ArticleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListModel.swift; sourceTree = "<group>"; };
+		DF355F6723CD6D6200088F94 /* ArticleListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListInteractor.swift; sourceTree = "<group>"; };
+		DF355F6923CD6D7200088F94 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
+		DF355F6B23CD6D8D00088F94 /* ArticleListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListPresenter.swift; sourceTree = "<group>"; };
+		DF355F6D23CD6DAF00088F94 /* ArticleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleProtocols.swift; sourceTree = "<group>"; };
+		DF355F6F23CD6DB900088F94 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		DF355F7123CD6DC800088F94 /* ArticleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInteractor.swift; sourceTree = "<group>"; };
+		DF355F7323CD6DD500088F94 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		DF355F7523CD6DE200088F94 /* ArticlePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePresenter.swift; sourceTree = "<group>"; };
+		DF355F7723CD72EB00088F94 /* ArticleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRouter.swift; sourceTree = "<group>"; };
+		DF355F7923CD72FC00088F94 /* ArticleListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListRouter.swift; sourceTree = "<group>"; };
+		DF355F7C23D542E200088F94 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF355F2A23CD6B7900088F94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF355F4023CD6B7A00088F94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF355F4B23CD6B7A00088F94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF355F2423CD6B7900088F94 = {
+			isa = PBXGroup;
+			children = (
+				DF355F2F23CD6B7900088F94 /* MartianTranslator */,
+				DF355F4623CD6B7A00088F94 /* MartianTranslatorTests */,
+				DF355F5123CD6B7A00088F94 /* MartianTranslatorUITests */,
+				DF355F2E23CD6B7900088F94 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF355F2E23CD6B7900088F94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F2D23CD6B7900088F94 /* MartianTranslator.app */,
+				DF355F4323CD6B7A00088F94 /* MartianTranslatorTests.xctest */,
+				DF355F4E23CD6B7A00088F94 /* MartianTranslatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF355F2F23CD6B7900088F94 /* MartianTranslator */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F7B23D542D400088F94 /* Utils */,
+				DF355F6023CD6C1700088F94 /* Modules */,
+				DF355F3023CD6B7900088F94 /* AppDelegate.swift */,
+				DF355F3223CD6B7900088F94 /* SceneDelegate.swift */,
+				DF355F3423CD6B7900088F94 /* ViewController.swift */,
+				DF355F3623CD6B7900088F94 /* ArticleListViewController.storyboard */,
+				DF355F3923CD6B7A00088F94 /* Assets.xcassets */,
+				DF355F3B23CD6B7A00088F94 /* LaunchScreen.storyboard */,
+				DF355F3E23CD6B7A00088F94 /* Info.plist */,
+			);
+			path = MartianTranslator;
+			sourceTree = "<group>";
+		};
+		DF355F4623CD6B7A00088F94 /* MartianTranslatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F4723CD6B7A00088F94 /* MartianTranslatorTests.swift */,
+				DF355F4923CD6B7A00088F94 /* Info.plist */,
+			);
+			path = MartianTranslatorTests;
+			sourceTree = "<group>";
+		};
+		DF355F5123CD6B7A00088F94 /* MartianTranslatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F5223CD6B7A00088F94 /* MartianTranslatorUITests.swift */,
+				DF355F5423CD6B7A00088F94 /* Info.plist */,
+			);
+			path = MartianTranslatorUITests;
+			sourceTree = "<group>";
+		};
+		DF355F6023CD6C1700088F94 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F6223CD6C4600088F94 /* Article */,
+				DF355F6123CD6C3A00088F94 /* Article List */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DF355F6123CD6C3A00088F94 /* Article List */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F6323CD6CB900088F94 /* ArticleListProtocols.swift */,
+				DF355F6523CD6CCD00088F94 /* ArticleListModel.swift */,
+				DF355F6723CD6D6200088F94 /* ArticleListInteractor.swift */,
+				DF355F6923CD6D7200088F94 /* ArticleListViewController.swift */,
+				DF355F6B23CD6D8D00088F94 /* ArticleListPresenter.swift */,
+				DF355F7923CD72FC00088F94 /* ArticleListRouter.swift */,
+			);
+			path = "Article List";
+			sourceTree = "<group>";
+		};
+		DF355F6223CD6C4600088F94 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F6D23CD6DAF00088F94 /* ArticleProtocols.swift */,
+				DF355F6F23CD6DB900088F94 /* ArticleModel.swift */,
+				DF355F7123CD6DC800088F94 /* ArticleInteractor.swift */,
+				DF355F7323CD6DD500088F94 /* ArticleViewController.swift */,
+				DF355F7523CD6DE200088F94 /* ArticlePresenter.swift */,
+				DF355F7723CD72EB00088F94 /* ArticleRouter.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		DF355F7B23D542D400088F94 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F7C23D542E200088F94 /* NavigationHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF355F2C23CD6B7900088F94 /* MartianTranslator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF355F5723CD6B7A00088F94 /* Build configuration list for PBXNativeTarget "MartianTranslator" */;
+			buildPhases = (
+				DF355F2923CD6B7900088F94 /* Sources */,
+				DF355F2A23CD6B7900088F94 /* Frameworks */,
+				DF355F2B23CD6B7900088F94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MartianTranslator;
+			productName = MartianTranslator;
+			productReference = DF355F2D23CD6B7900088F94 /* MartianTranslator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF355F4223CD6B7A00088F94 /* MartianTranslatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF355F5A23CD6B7A00088F94 /* Build configuration list for PBXNativeTarget "MartianTranslatorTests" */;
+			buildPhases = (
+				DF355F3F23CD6B7A00088F94 /* Sources */,
+				DF355F4023CD6B7A00088F94 /* Frameworks */,
+				DF355F4123CD6B7A00088F94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF355F4523CD6B7A00088F94 /* PBXTargetDependency */,
+			);
+			name = MartianTranslatorTests;
+			productName = MartianTranslatorTests;
+			productReference = DF355F4323CD6B7A00088F94 /* MartianTranslatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF355F4D23CD6B7A00088F94 /* MartianTranslatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF355F5D23CD6B7A00088F94 /* Build configuration list for PBXNativeTarget "MartianTranslatorUITests" */;
+			buildPhases = (
+				DF355F4A23CD6B7A00088F94 /* Sources */,
+				DF355F4B23CD6B7A00088F94 /* Frameworks */,
+				DF355F4C23CD6B7A00088F94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF355F5023CD6B7A00088F94 /* PBXTargetDependency */,
+			);
+			name = MartianTranslatorUITests;
+			productName = MartianTranslatorUITests;
+			productReference = DF355F4E23CD6B7A00088F94 /* MartianTranslatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF355F2523CD6B7900088F94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Marcus  Robinson";
+				TargetAttributes = {
+					DF355F2C23CD6B7900088F94 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					DF355F4223CD6B7A00088F94 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = DF355F2C23CD6B7900088F94;
+					};
+					DF355F4D23CD6B7A00088F94 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = DF355F2C23CD6B7900088F94;
+					};
+				};
+			};
+			buildConfigurationList = DF355F2823CD6B7900088F94 /* Build configuration list for PBXProject "MartianTranslator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF355F2423CD6B7900088F94;
+			productRefGroup = DF355F2E23CD6B7900088F94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF355F2C23CD6B7900088F94 /* MartianTranslator */,
+				DF355F4223CD6B7A00088F94 /* MartianTranslatorTests */,
+				DF355F4D23CD6B7A00088F94 /* MartianTranslatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF355F2B23CD6B7900088F94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF355F3D23CD6B7A00088F94 /* LaunchScreen.storyboard in Resources */,
+				DF355F3A23CD6B7A00088F94 /* Assets.xcassets in Resources */,
+				DF355F3823CD6B7900088F94 /* ArticleListViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF355F4123CD6B7A00088F94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF355F4C23CD6B7A00088F94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF355F2923CD6B7900088F94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF355F6623CD6CCD00088F94 /* ArticleListModel.swift in Sources */,
+				DF355F7D23D542E200088F94 /* NavigationHelper.swift in Sources */,
+				DF355F7423CD6DD500088F94 /* ArticleViewController.swift in Sources */,
+				DF355F3523CD6B7900088F94 /* ViewController.swift in Sources */,
+				DF355F3123CD6B7900088F94 /* AppDelegate.swift in Sources */,
+				DF355F6423CD6CB900088F94 /* ArticleListProtocols.swift in Sources */,
+				DF355F7223CD6DC800088F94 /* ArticleInteractor.swift in Sources */,
+				DF355F3323CD6B7900088F94 /* SceneDelegate.swift in Sources */,
+				DF355F7623CD6DE200088F94 /* ArticlePresenter.swift in Sources */,
+				DF355F6E23CD6DAF00088F94 /* ArticleProtocols.swift in Sources */,
+				DF355F7023CD6DB900088F94 /* ArticleModel.swift in Sources */,
+				DF355F6C23CD6D8D00088F94 /* ArticleListPresenter.swift in Sources */,
+				DF355F6823CD6D6200088F94 /* ArticleListInteractor.swift in Sources */,
+				DF355F7A23CD72FC00088F94 /* ArticleListRouter.swift in Sources */,
+				DF355F6A23CD6D7200088F94 /* ArticleListViewController.swift in Sources */,
+				DF355F7823CD72EB00088F94 /* ArticleRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF355F3F23CD6B7A00088F94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF355F4823CD6B7A00088F94 /* MartianTranslatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF355F4A23CD6B7A00088F94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF355F5323CD6B7A00088F94 /* MartianTranslatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF355F4523CD6B7A00088F94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF355F2C23CD6B7900088F94 /* MartianTranslator */;
+			targetProxy = DF355F4423CD6B7A00088F94 /* PBXContainerItemProxy */;
+		};
+		DF355F5023CD6B7A00088F94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF355F2C23CD6B7900088F94 /* MartianTranslator */;
+			targetProxy = DF355F4F23CD6B7A00088F94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF355F3623CD6B7900088F94 /* ArticleListViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF355F3723CD6B7900088F94 /* Base */,
+			);
+			name = ArticleListViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		DF355F3B23CD6B7A00088F94 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF355F3C23CD6B7A00088F94 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF355F5523CD6B7A00088F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF355F5623CD6B7A00088F94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF355F5823CD6B7A00088F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MartianTranslator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newyorktimes.MartianTranslator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF355F5923CD6B7A00088F94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MartianTranslator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newyorktimes.MartianTranslator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DF355F5B23CD6B7A00088F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MartianTranslatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newyorktimes.MartianTranslatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MartianTranslator.app/MartianTranslator";
+			};
+			name = Debug;
+		};
+		DF355F5C23CD6B7A00088F94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MartianTranslatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newyorktimes.MartianTranslatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MartianTranslator.app/MartianTranslator";
+			};
+			name = Release;
+		};
+		DF355F5E23CD6B7A00088F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MartianTranslatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newyorktimes.MartianTranslatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MartianTranslator;
+			};
+			name = Debug;
+		};
+		DF355F5F23CD6B7A00088F94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MartianTranslatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newyorktimes.MartianTranslatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MartianTranslator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF355F2823CD6B7900088F94 /* Build configuration list for PBXProject "MartianTranslator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF355F5523CD6B7A00088F94 /* Debug */,
+				DF355F5623CD6B7A00088F94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF355F5723CD6B7A00088F94 /* Build configuration list for PBXNativeTarget "MartianTranslator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF355F5823CD6B7A00088F94 /* Debug */,
+				DF355F5923CD6B7A00088F94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF355F5A23CD6B7A00088F94 /* Build configuration list for PBXNativeTarget "MartianTranslatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF355F5B23CD6B7A00088F94 /* Debug */,
+				DF355F5C23CD6B7A00088F94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF355F5D23CD6B7A00088F94 /* Build configuration list for PBXNativeTarget "MartianTranslatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF355F5E23CD6B7A00088F94 /* Debug */,
+				DF355F5F23CD6B7A00088F94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF355F2523CD6B7900088F94 /* Project object */;
+}
