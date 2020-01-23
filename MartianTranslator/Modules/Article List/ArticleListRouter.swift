@@ -28,7 +28,7 @@ class ArticleListRouter: ArticleListRouterProtocol {
     }
     
     func presentArticleModule() {
-        <#code#>
+        // Navigate to Article View Controller
     }
     
     

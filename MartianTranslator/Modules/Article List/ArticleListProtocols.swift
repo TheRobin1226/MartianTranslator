@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // View -> Presenter
 protocol ArticleListPresenterProtocol: class {
@@ -23,7 +24,7 @@ protocol ArticleListPresenterProtocol: class {
 protocol ArticleListViewProtocol: class {
     var presenter: ArticleListPresenterProtocol? { get set }
     func showError(message: String)
-    func showArticle(articleArray: [ArticleListModel])
+    func showArticle(articleArray: [ArticleListModel], topImagesArray: [UIImage])
 }
 
 // Presenter -> Router
@@ -40,6 +41,6 @@ protocol ArticleListInteractorInputProtocol: class {
 
 // Interactor -> Presenter
 protocol ArticleListInteractorOutputProtocol: class {
-    func articlesFetchedSuccess(articleArray: [ArticleListModel])
+    func articlesFetchedSuccess(articleArray: [ArticleListModel], topImagesArray: [UIImage])
     func articlesFetchFailed(errorMessage: String)
 }

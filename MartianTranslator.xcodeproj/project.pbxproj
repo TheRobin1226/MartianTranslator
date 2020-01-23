@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DF355F3123CD6B7900088F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F3023CD6B7900088F94 /* AppDelegate.swift */; };
-		DF355F3323CD6B7900088F94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F3223CD6B7900088F94 /* SceneDelegate.swift */; };
-		DF355F3523CD6B7900088F94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F3423CD6B7900088F94 /* ViewController.swift */; };
 		DF355F3823CD6B7900088F94 /* ArticleListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF355F3623CD6B7900088F94 /* ArticleListViewController.storyboard */; };
 		DF355F3A23CD6B7A00088F94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF355F3923CD6B7A00088F94 /* Assets.xcassets */; };
 		DF355F3D23CD6B7A00088F94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF355F3B23CD6B7A00088F94 /* LaunchScreen.storyboard */; };
@@ -50,8 +48,6 @@
 /* Begin PBXFileReference section */
 		DF355F2D23CD6B7900088F94 /* MartianTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MartianTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF355F3023CD6B7900088F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF355F3223CD6B7900088F94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF355F3423CD6B7900088F94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DF355F3723CD6B7900088F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ArticleListViewController.storyboard; sourceTree = "<group>"; };
 		DF355F3923CD6B7A00088F94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF355F3C23CD6B7A00088F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,8 +124,6 @@
 				DF355F7B23D542D400088F94 /* Utils */,
 				DF355F6023CD6C1700088F94 /* Modules */,
 				DF355F3023CD6B7900088F94 /* AppDelegate.swift */,
-				DF355F3223CD6B7900088F94 /* SceneDelegate.swift */,
-				DF355F3423CD6B7900088F94 /* ViewController.swift */,
 				DF355F3623CD6B7900088F94 /* ArticleListViewController.storyboard */,
 				DF355F3923CD6B7A00088F94 /* Assets.xcassets */,
 				DF355F3B23CD6B7A00088F94 /* LaunchScreen.storyboard */,
@@ -333,11 +327,9 @@
 				DF355F6623CD6CCD00088F94 /* ArticleListModel.swift in Sources */,
 				DF355F7D23D542E200088F94 /* NavigationHelper.swift in Sources */,
 				DF355F7423CD6DD500088F94 /* ArticleViewController.swift in Sources */,
-				DF355F3523CD6B7900088F94 /* ViewController.swift in Sources */,
 				DF355F3123CD6B7900088F94 /* AppDelegate.swift in Sources */,
 				DF355F6423CD6CB900088F94 /* ArticleListProtocols.swift in Sources */,
 				DF355F7223CD6DC800088F94 /* ArticleInteractor.swift in Sources */,
-				DF355F3323CD6B7900088F94 /* SceneDelegate.swift in Sources */,
 				DF355F7623CD6DE200088F94 /* ArticlePresenter.swift in Sources */,
 				DF355F6E23CD6DAF00088F94 /* ArticleProtocols.swift in Sources */,
 				DF355F7023CD6DB900088F94 /* ArticleModel.swift in Sources */,

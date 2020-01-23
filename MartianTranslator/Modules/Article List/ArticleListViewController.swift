@@ -11,24 +11,24 @@ import UIKit
 
 class ArticleListViewController: UIViewController {
     
-    @IBOutlet weak var articleTableViewCell: UITableView!
+    @IBOutlet weak var articleTableView: UITableView!
     var presenter: ArticleListPresenterProtocol?
     var articleArray: [ArticleListModel] = []
+    var topImages: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Name Coming Soon"
+        self.title = "The Alien Times"
         
         presenter?.startFetchingArticles()
         
-        articleTableViewCell.delegate = self
-        articleTableViewCell.dataSource = self
+        articleTableView.delegate = self
+        articleTableView.dataSource = self
     }
     
     static func instantiate() -> ArticleListViewController {
         return UIStoryboard(name: "ArticleListViewController", bundle: nil).instantiateViewController(withIdentifier: "ArticleListViewController") as! ArticleListViewController
     }
-    
     
 }
 
@@ -40,11 +40,13 @@ extension ArticleListViewController: ArticleListViewProtocol {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func showArticle(articleArray: [ArticleListModel]) {
+    func showArticle(articleArray: [ArticleListModel], topImagesArray: [UIImage]) {
         self.articleArray = articleArray
-        self.articleTableViewCell.reloadData()
+        self.topImages = topImagesArray
+        DispatchQueue.main.async {
+            self.articleTableView.reloadData()
+        }
     }
-    
 }
 
 extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -53,7 +55,12 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as! ArticleTableViewCell
+        
+        cell.articleImage.image = self.topImages[indexPath.row]
+        cell.articleTitle.text = self.articleArray[indexPath.row].title
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

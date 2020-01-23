@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ArticleListPresenter: ArticleListPresenterProtocol, ArticleListInteractorOutputProtocol {
     
@@ -24,8 +25,8 @@ class ArticleListPresenter: ArticleListPresenterProtocol, ArticleListInteractorO
         router?.presentArticleModule()
     }
     
-    func articlesFetchedSuccess(articleArray: [ArticleListModel]) {
-        view?.showArticle(articleArray: articleArray)
+    func articlesFetchedSuccess(articleArray: [ArticleListModel], topImagesArray: [UIImage]) {
+        view?.showArticle(articleArray: articleArray, topImagesArray: topImagesArray)
     }
     
     func articlesFetchFailed(errorMessage: String) {
