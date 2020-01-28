@@ -26,6 +26,7 @@
 		DF355F7823CD72EB00088F94 /* ArticleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7723CD72EB00088F94 /* ArticleRouter.swift */; };
 		DF355F7A23CD72FC00088F94 /* ArticleListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7923CD72FC00088F94 /* ArticleListRouter.swift */; };
 		DF355F7D23D542E200088F94 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7C23D542E200088F94 /* NavigationHelper.swift */; };
+		DFFDA23123DA911C001ACAB0 /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFFDA23023DA911C001ACAB0 /* ArticleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		DF355F7723CD72EB00088F94 /* ArticleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRouter.swift; sourceTree = "<group>"; };
 		DF355F7923CD72FC00088F94 /* ArticleListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListRouter.swift; sourceTree = "<group>"; };
 		DF355F7C23D542E200088F94 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
+		DFFDA23023DA911C001ACAB0 /* ArticleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +126,6 @@
 				DF355F7B23D542D400088F94 /* Utils */,
 				DF355F6023CD6C1700088F94 /* Modules */,
 				DF355F3023CD6B7900088F94 /* AppDelegate.swift */,
-				DF355F3623CD6B7900088F94 /* ArticleListViewController.storyboard */,
 				DF355F3923CD6B7A00088F94 /* Assets.xcassets */,
 				DF355F3B23CD6B7A00088F94 /* LaunchScreen.storyboard */,
 				DF355F3E23CD6B7A00088F94 /* Info.plist */,
@@ -162,12 +163,12 @@
 		DF355F6123CD6C3A00088F94 /* Article List */ = {
 			isa = PBXGroup;
 			children = (
+				DF355F7F23DA750600088F94 /* View */,
+				DF355F8023DA750E00088F94 /* Interactor */,
+				DF355F8123DA751F00088F94 /* Presenter */,
+				DF355F7E23DA74FD00088F94 /* Entity */,
+				DF355F8223DA752500088F94 /* Router */,
 				DF355F6323CD6CB900088F94 /* ArticleListProtocols.swift */,
-				DF355F6523CD6CCD00088F94 /* ArticleListModel.swift */,
-				DF355F6723CD6D6200088F94 /* ArticleListInteractor.swift */,
-				DF355F6923CD6D7200088F94 /* ArticleListViewController.swift */,
-				DF355F6B23CD6D8D00088F94 /* ArticleListPresenter.swift */,
-				DF355F7923CD72FC00088F94 /* ArticleListRouter.swift */,
 			);
 			path = "Article List";
 			sourceTree = "<group>";
@@ -175,12 +176,12 @@
 		DF355F6223CD6C4600088F94 /* Article */ = {
 			isa = PBXGroup;
 			children = (
+				DF355F8323DA760D00088F94 /* View */,
+				DF355F8423DA761400088F94 /* Interactor */,
+				DF355F8523DA761C00088F94 /* Presenter */,
+				DF355F8623DA762600088F94 /* Entity */,
+				DF355F8723DA762D00088F94 /* Router */,
 				DF355F6D23CD6DAF00088F94 /* ArticleProtocols.swift */,
-				DF355F6F23CD6DB900088F94 /* ArticleModel.swift */,
-				DF355F7123CD6DC800088F94 /* ArticleInteractor.swift */,
-				DF355F7323CD6DD500088F94 /* ArticleViewController.swift */,
-				DF355F7523CD6DE200088F94 /* ArticlePresenter.swift */,
-				DF355F7723CD72EB00088F94 /* ArticleRouter.swift */,
 			);
 			path = Article;
 			sourceTree = "<group>";
@@ -191,6 +192,88 @@
 				DF355F7C23D542E200088F94 /* NavigationHelper.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		DF355F7E23DA74FD00088F94 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F6523CD6CCD00088F94 /* ArticleListModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DF355F7F23DA750600088F94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F6923CD6D7200088F94 /* ArticleListViewController.swift */,
+				DF355F3623CD6B7900088F94 /* ArticleListViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF355F8023DA750E00088F94 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F6723CD6D6200088F94 /* ArticleListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DF355F8123DA751F00088F94 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F6B23CD6D8D00088F94 /* ArticleListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DF355F8223DA752500088F94 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F7923CD72FC00088F94 /* ArticleListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DF355F8323DA760D00088F94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F7323CD6DD500088F94 /* ArticleViewController.swift */,
+				DFFDA23023DA911C001ACAB0 /* ArticleViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF355F8423DA761400088F94 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F7123CD6DC800088F94 /* ArticleInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DF355F8523DA761C00088F94 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F7523CD6DE200088F94 /* ArticlePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DF355F8623DA762600088F94 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F6F23CD6DB900088F94 /* ArticleModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DF355F8723DA762D00088F94 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DF355F7723CD72EB00088F94 /* ArticleRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF355F3D23CD6B7A00088F94 /* LaunchScreen.storyboard in Resources */,
+				DFFDA23123DA911C001ACAB0 /* ArticleViewController.xib in Resources */,
 				DF355F3A23CD6B7A00088F94 /* Assets.xcassets in Resources */,
 				DF355F3823CD6B7900088F94 /* ArticleListViewController.storyboard in Resources */,
 			);

@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
-struct ArticleModel: Codable {
+struct ArticleModel {
     let body: String
-    let imageUrl: String
-    let topImage: Bool
+    let title: String
+    let topImage: UIImage
 }

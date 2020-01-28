@@ -64,7 +64,11 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.presentArticleViewController()
+        let articleModel: ArticleModel = ArticleModel(body: self.articleArray[indexPath.row].body,
+                                                      title: self.articleArray[indexPath.row].title,
+                                                      topImage: self.topImages[indexPath.row])
+        
+        presenter?.presentArticleViewController(navigationController: navigationController!, articleModel: articleModel)
     }
     
 }

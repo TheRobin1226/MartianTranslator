@@ -16,7 +16,7 @@ protocol ArticleListPresenterProtocol: class {
     var interactor: ArticleListInteractorInputProtocol? { get set }
     var router: ArticleListRouterProtocol? { get set }
     func startFetchingArticles()
-    func presentArticleViewController()
+    func presentArticleViewController(navigationController: UINavigationController, articleModel: ArticleModel)
     
 }
 
@@ -30,7 +30,7 @@ protocol ArticleListViewProtocol: class {
 // Presenter -> Router
 protocol ArticleListRouterProtocol: class {
     static func presentArticleListModule(fromView: AnyObject)
-    func presentArticleModule()
+    func presentArticleModule(navigationController: UINavigationController, articleModel: ArticleModel)
 }
 
 // Presenter -> Interactor

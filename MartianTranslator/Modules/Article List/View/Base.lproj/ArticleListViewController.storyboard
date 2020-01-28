@@ -33,18 +33,18 @@
                                                         <constraint firstAttribute="width" constant="80" id="t46-eK-19q"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVw-Dj-DQw">
-                                                    <rect key="frame" x="98" y="50" width="250" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVw-Dj-DQw">
+                                                    <rect key="frame" x="98" y="43" width="250" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="QVw-Dj-DQw" firstAttribute="top" secondItem="7cN-G8-O9p" secondAttribute="topMargin" constant="39" id="IXj-FD-NEe"/>
+                                                <constraint firstItem="QVw-Dj-DQw" firstAttribute="top" secondItem="7cN-G8-O9p" secondAttribute="topMargin" constant="32" id="IXj-FD-NEe"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="QVw-Dj-DQw" secondAttribute="trailing" constant="12" id="QJn-XL-eJ3"/>
                                                 <constraint firstItem="QVw-Dj-DQw" firstAttribute="leading" secondItem="vaQ-Jw-nLE" secondAttribute="trailing" constant="8" id="SOR-5a-N8j"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="QVw-Dj-DQw" secondAttribute="bottom" constant="48" id="lte-kZ-3iu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="QVw-Dj-DQw" secondAttribute="bottom" constant="40" id="lte-kZ-3iu"/>
                                                 <constraint firstItem="vaQ-Jw-nLE" firstAttribute="top" secondItem="7cN-G8-O9p" secondAttribute="top" constant="20" id="rrg-Bu-ABw"/>
                                                 <constraint firstItem="vaQ-Jw-nLE" firstAttribute="leading" secondItem="7cN-G8-O9p" secondAttribute="leading" constant="10" id="wnD-FT-8Oq"/>
                                             </constraints>

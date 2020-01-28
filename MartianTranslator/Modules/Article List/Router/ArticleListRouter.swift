@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 class ArticleListRouter: ArticleListRouterProtocol {
-    
+
     static func presentArticleListModule(fromView: AnyObject) {
         let view: ArticleListViewProtocol = ArticleListViewController.instantiate()
         
@@ -24,12 +25,11 @@ class ArticleListRouter: ArticleListRouterProtocol {
         interactor.presenter = presenter
         
         let viewController = view as! ArticleListViewController
-        NavigationHelper.setRootViewController(withViewController: viewController)
+        NavigationHelper.sharedInstance.setRootViewController(withViewController: viewController)
     }
     
-    func presentArticleModule() {
-        // Navigate to Article View Controller
+    func presentArticleModule(navigationController: UINavigationController, articleModel: ArticleModel) {
+        let articleViewController = ArticleViewController(articleModel: articleModel)
+        NavigationHelper.sharedInstance.pushViewController(navigationController: navigationController, viewController: articleViewController, animated: true)
     }
-    
-    
 }

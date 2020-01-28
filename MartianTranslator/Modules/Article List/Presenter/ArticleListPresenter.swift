@@ -21,8 +21,8 @@ class ArticleListPresenter: ArticleListPresenterProtocol, ArticleListInteractorO
         interactor?.fetchArticlesFromJSON()
     }
     
-    func presentArticleViewController() {
-        router?.presentArticleModule()
+    func presentArticleViewController(navigationController: UINavigationController, articleModel: ArticleModel) {
+        router?.presentArticleModule(navigationController: navigationController, articleModel: articleModel)
     }
     
     func articlesFetchedSuccess(articleArray: [ArticleListModel], topImagesArray: [UIImage]) {
