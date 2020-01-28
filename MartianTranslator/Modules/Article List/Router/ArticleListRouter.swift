@@ -29,7 +29,7 @@ class ArticleListRouter: ArticleListRouterProtocol {
     }
     
     func presentArticleModule(navigationController: UINavigationController, articleModel: ArticleModel) {
-        let articleViewController = ArticleViewController(articleModel: articleModel)
+        let articleViewController = ArticleRouter.createArticleModule(articleModel: articleModel)
         NavigationHelper.sharedInstance.pushViewController(navigationController: navigationController, viewController: articleViewController, animated: true)
     }
 }

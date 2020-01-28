@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import UIKit
+
+class ArticlePresenter: ArticlePresenterProtocol, ArticleInteractorOutputProtocol {
+    
+    var view: ArticleViewProtocol?
+    
+    var interactor: ArticleInteractorInputProtocol?
+    
+    var router: ArticleRouterProtocol?
+    
+    func goBack(navigationController: UINavigationController) {
+        
+    }
+    
+    func articlesTranslationSuccess(articleTranslatedText: String) {
+        
+    }
+    
+}

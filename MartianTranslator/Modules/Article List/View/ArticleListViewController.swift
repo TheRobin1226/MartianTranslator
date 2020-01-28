@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ArticleListViewController: UIViewController {
+final class ArticleListViewController: UIViewController {
     
     @IBOutlet weak var articleTableView: UITableView!
     var presenter: ArticleListPresenterProtocol?

@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class ArticleViewController: UIViewController {
+final class ArticleViewController: UIViewController {
     
     var articleModel: ArticleModel?
+    var presenter: ArticlePresenterProtocol?
     
     init(articleModel: ArticleModel) {
         self.articleModel = articleModel
@@ -25,5 +26,11 @@ class ArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(self.articleModel)
+    }
+}
+
+extension ArticleViewController: ArticleViewProtocol {
+    func presentArticleTranslation(articleTranslatedText: String) {
+    
     }
 }

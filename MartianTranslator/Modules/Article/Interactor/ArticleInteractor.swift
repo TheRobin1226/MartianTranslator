@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class ArticleInteractor: ArticleInteractorInputProtocol {
+    func fetchTranslationOfArticle() {
+        
+    }
+    
+    var presenter: ArticleInteractorOutputProtocol?
+    
+}
