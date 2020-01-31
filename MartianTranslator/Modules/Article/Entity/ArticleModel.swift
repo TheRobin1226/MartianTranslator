@@ -6,7 +6,6 @@
 //  Copyright © 2020 Marcus  Robinson. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 struct ArticleModel {

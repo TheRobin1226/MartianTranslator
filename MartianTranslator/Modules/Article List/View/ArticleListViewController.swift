@@ -19,11 +19,15 @@ final class ArticleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "The Alien Times"
-        
+        self.view.backgroundColor = Constants.americanViolet
         presenter?.startFetchingArticles()
-        
-        articleTableView.delegate = self
-        articleTableView.dataSource = self
+        setupArticleListTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barTintColor = Constants.americanViolet
+        navigationController?.navigationBar.tintColor = Constants.americanViolet
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : Constants.gold]
     }
     
     static func instantiate() -> ArticleListViewController {
@@ -32,6 +36,7 @@ final class ArticleListViewController: UIViewController {
     
 }
 
+// MARK: - ArticleListViewProtocol
 extension ArticleListViewController: ArticleListViewProtocol {
     
     func showError(message: String) {
@@ -43,12 +48,11 @@ extension ArticleListViewController: ArticleListViewProtocol {
     func showArticle(articleArray: [ArticleListModel], topImagesArray: [UIImage]) {
         self.articleArray = articleArray
         self.topImages = topImagesArray
-        DispatchQueue.main.async {
-            self.articleTableView.reloadData()
-        }
+        self.articleTableView.reloadData()
     }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
 extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articleArray.count
@@ -73,8 +77,11 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
     
 }
 
-class ArticleTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var articleImage: UIImageView!
-    @IBOutlet weak var articleTitle: UILabel!
+// MARK: - Private
+extension ArticleListViewController {
+    private func setupArticleListTableView() {
+        articleTableView.tableFooterView = UIView()
+        articleTableView.delegate = self
+        articleTableView.dataSource = self
+    }
 }

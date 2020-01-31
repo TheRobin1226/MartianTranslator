@@ -6,13 +6,9 @@
 //  Copyright © 2020 Marcus  Robinson. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class ArticleRouter: ArticleRouterProtocol {
-    func goBack(navigationController: UINavigationController) {
-        NavigationHelper.sharedInstance.goBack(navigationController: navigationController, animated: true)
-    }
     
     static func createArticleModule(articleModel: ArticleModel) -> ArticleViewController {
         let view = ArticleViewController(articleModel: articleModel)
@@ -28,5 +24,9 @@ class ArticleRouter: ArticleRouterProtocol {
         interactor.presenter = presenter
         
         return view
+    }
+    
+    func goBack(navigationController: UINavigationController) {
+        NavigationHelper.sharedInstance.goBack(navigationController: navigationController, animated: true)
     }
 }

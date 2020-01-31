@@ -18,11 +18,14 @@ class ArticlePresenter: ArticlePresenterProtocol, ArticleInteractorOutputProtoco
     var router: ArticleRouterProtocol?
     
     func goBack(navigationController: UINavigationController) {
-        
+        router?.goBack(navigationController: navigationController)
     }
     
     func articlesTranslationSuccess(articleTranslatedText: String) {
-        
+        view?.presentArticleTranslation(articleTranslatedText: articleTranslatedText)
     }
     
+    func startTranslatingArticle(articleText: String) {
+        interactor?.fetchTranslationOfArticle(articleText: articleText)
+    }
 }

@@ -33,7 +33,11 @@ class ArticleListInteractor: ArticleListInteractorInputProtocol {
                             }
                         }
                     }
-                    self.presenter?.articlesFetchedSuccess(articleArray: jsonData, topImagesArray: self.topImages)
+                    OperationQueue.main.addOperation({
+                        //calling another function after fetching the json
+                        //it will show the names to label
+                        self.presenter?.articlesFetchedSuccess(articleArray: jsonData, topImagesArray: self.topImages)
+                    })
                   } catch let error {
                     self.presenter?.articlesFetchFailed(errorMessage: error.localizedDescription)
                   }

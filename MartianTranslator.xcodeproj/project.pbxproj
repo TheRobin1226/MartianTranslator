@@ -26,6 +26,8 @@
 		DF355F7823CD72EB00088F94 /* ArticleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7723CD72EB00088F94 /* ArticleRouter.swift */; };
 		DF355F7A23CD72FC00088F94 /* ArticleListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7923CD72FC00088F94 /* ArticleListRouter.swift */; };
 		DF355F7D23D542E200088F94 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF355F7C23D542E200088F94 /* NavigationHelper.swift */; };
+		DF867A6F23E3CF4E00094D4E /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF867A6E23E3CF4E00094D4E /* ArticleTableViewCell.swift */; };
+		DF867A7123E3E99B00094D4E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF867A7023E3E99B00094D4E /* Constants.swift */; };
 		DFFDA23123DA911C001ACAB0 /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFFDA23023DA911C001ACAB0 /* ArticleViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		DF355F7723CD72EB00088F94 /* ArticleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRouter.swift; sourceTree = "<group>"; };
 		DF355F7923CD72FC00088F94 /* ArticleListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListRouter.swift; sourceTree = "<group>"; };
 		DF355F7C23D542E200088F94 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
+		DF867A6E23E3CF4E00094D4E /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		DF867A7023E3E99B00094D4E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DFFDA23023DA911C001ACAB0 /* ArticleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				DF355F7C23D542E200088F94 /* NavigationHelper.swift */,
+				DF867A7023E3E99B00094D4E /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			children = (
 				DF355F6923CD6D7200088F94 /* ArticleListViewController.swift */,
 				DF355F3623CD6B7900088F94 /* ArticleListViewController.storyboard */,
+				DF867A6E23E3CF4E00094D4E /* ArticleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -415,9 +421,11 @@
 				DF355F6423CD6CB900088F94 /* ArticleListProtocols.swift in Sources */,
 				DF355F7223CD6DC800088F94 /* ArticleInteractor.swift in Sources */,
 				DF355F7623CD6DE200088F94 /* ArticlePresenter.swift in Sources */,
+				DF867A7123E3E99B00094D4E /* Constants.swift in Sources */,
 				DF355F6E23CD6DAF00088F94 /* ArticleProtocols.swift in Sources */,
 				DF355F7023CD6DB900088F94 /* ArticleModel.swift in Sources */,
 				DF355F6C23CD6D8D00088F94 /* ArticleListPresenter.swift in Sources */,
+				DF867A6F23E3CF4E00094D4E /* ArticleTableViewCell.swift in Sources */,
 				DF355F6823CD6D6200088F94 /* ArticleListInteractor.swift in Sources */,
 				DF355F7A23CD72FC00088F94 /* ArticleListRouter.swift in Sources */,
 				DF355F6A23CD6D7200088F94 /* ArticleListViewController.swift in Sources */,

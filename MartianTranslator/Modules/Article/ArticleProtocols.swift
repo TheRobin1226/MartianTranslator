@@ -11,12 +11,11 @@ import UIKit
 
 // View -> Presenter
 protocol ArticlePresenterProtocol: class {
-    
     var view: ArticleViewProtocol? { get set }
     var interactor: ArticleInteractorInputProtocol? { get set }
     var router: ArticleRouterProtocol? { get set }
     func goBack(navigationController: UINavigationController)
-    
+    func startTranslatingArticle(articleText: String)
 }
 
 // Presenter -> View
@@ -34,7 +33,7 @@ protocol ArticleRouterProtocol: class {
 // Presenter -> Interactor
 protocol ArticleInteractorInputProtocol: class {
     var presenter: ArticleInteractorOutputProtocol? { get set }
-    func fetchTranslationOfArticle()
+    func fetchTranslationOfArticle(articleText: String)
 }
 
 // Interactor -> Presenter

@@ -9,10 +9,13 @@
 import Foundation
 
 class ArticleInteractor: ArticleInteractorInputProtocol {
-    func fetchTranslationOfArticle() {
-        
-    }
     
     var presenter: ArticleInteractorOutputProtocol?
+    
+    func fetchTranslationOfArticle(articleText: String) {
+        presenter?.articlesTranslationSuccess(articleTranslatedText: "Success")
+    }
+    
+    
     
 }

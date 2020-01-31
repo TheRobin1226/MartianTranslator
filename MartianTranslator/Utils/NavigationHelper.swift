@@ -16,6 +16,7 @@ class NavigationHelper {
     
     func setRootViewController(withViewController: UIViewController) {
         let navigationController = UINavigationController(rootViewController: withViewController)
+        setNavigationBarAttributes(navigationController: navigationController)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
         appDelegate.window?.rootViewController = navigationController
@@ -28,5 +29,15 @@ class NavigationHelper {
     
     func goBack(navigationController: UINavigationController, animated: Bool) {
         navigationController.popViewController(animated: animated)
+    }
+}
+
+// MARK: - Private
+private extension NavigationHelper {
+    func setNavigationBarAttributes(navigationController: UINavigationController) {
+        navigationController.navigationItem.backBarButtonItem?.title = ""
+        navigationController.navigationBar.barTintColor = .black
+        navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
     }
 }
