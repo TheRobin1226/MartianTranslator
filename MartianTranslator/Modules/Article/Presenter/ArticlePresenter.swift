@@ -25,7 +25,7 @@ class ArticlePresenter: ArticlePresenterProtocol, ArticleInteractorOutputProtoco
         view?.presentArticleTranslation(articleTranslatedText: articleTranslatedText)
     }
     
-    func startTranslatingArticle(articleText: String) {
-        interactor?.fetchTranslationOfArticle(articleText: articleText)
+    func startMartianTranslation(articleText: String) {
+        interactor?.fetchMartianTranslation(articleText: articleText)
     }
 }

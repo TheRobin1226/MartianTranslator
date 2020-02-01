@@ -15,7 +15,7 @@ protocol ArticlePresenterProtocol: class {
     var interactor: ArticleInteractorInputProtocol? { get set }
     var router: ArticleRouterProtocol? { get set }
     func goBack(navigationController: UINavigationController)
-    func startTranslatingArticle(articleText: String)
+    func startMartianTranslation(articleText: String)
 }
 
 // Presenter -> View
@@ -33,7 +33,7 @@ protocol ArticleRouterProtocol: class {
 // Presenter -> Interactor
 protocol ArticleInteractorInputProtocol: class {
     var presenter: ArticleInteractorOutputProtocol? { get set }
-    func fetchTranslationOfArticle(articleText: String)
+    func fetchMartianTranslation(articleText: String)
 }
 
 // Interactor -> Presenter

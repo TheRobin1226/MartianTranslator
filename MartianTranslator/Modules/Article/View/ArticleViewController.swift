@@ -72,8 +72,7 @@ private extension ArticleViewController {
     
     @objc func stateChanged(mySwitch: UISwitch) {
         if (translateSwitch.isOn) {
-            // call translate function
-            presenter?.startTranslatingArticle(articleText: articleModel!.body)
+            presenter?.startMartianTranslation(articleText: articleModel!.body)
             articleTextView.text = self.articleTranslatedText
         } else {
             articleTextView.text = articleModel?.body
