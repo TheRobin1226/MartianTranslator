@@ -13,13 +13,13 @@ final class ArticleViewController: UIViewController {
     
     var articleModel: ArticleModel?
     var presenter: ArticlePresenterProtocol?
-    var articleTranslatedText: String?
+    var translatedArticleModel: ArticleModel?
     
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleTextView: UITextView!
     @IBOutlet weak var translateSwitch: UISwitch!
-    @IBOutlet weak var translateText: UILabel!
+    @IBOutlet weak var translateLabel: UILabel!
     
     init(articleModel: ArticleModel) {
         self.articleModel = articleModel
@@ -33,54 +33,55 @@ final class ArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "The Alien Times"
-        self.view.backgroundColor = Constants.gold
+        self.view.backgroundColor = Constants.customColors.gold
         setArticleView()
         setTranslatorSwitch()
         setLeftButtonBarItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.barTintColor = Constants.gold
-        navigationController?.navigationBar.tintColor = Constants.americanViolet
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Constants.americanViolet]
-        self.navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.barTintColor = Constants.customColors.gold
+        navigationController?.navigationBar.tintColor = Constants.customColors.americanViolet
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Constants.customColors.americanViolet]
     }
 }
 
 // MARK: - ArticleViewProtocol
 extension ArticleViewController: ArticleViewProtocol {
-    func presentArticleTranslation(articleTranslatedText: String) {
-        self.articleTranslatedText = articleTranslatedText
+    func presentArticleTranslation(articleModel: ArticleModel) {
+        translatedArticleModel = articleModel
     }
 }
 
 // MARK: - Private
 private extension ArticleViewController {
     func setArticleView() {
-        translateText.textColor = Constants.americanViolet
+        translateLabel.textColor = Constants.customColors.americanViolet
         articleTitle.text = articleModel?.title
-        articleTitle.textColor = Constants.americanViolet
+        articleTitle.textColor = Constants.customColors.americanViolet
         articleTextView.text = articleModel?.body
-        articleTextView.textColor = Constants.americanViolet
+        articleTextView.textColor = Constants.customColors.americanViolet
         articleImageView.image = articleModel?.topImage
     }
     
     func setTranslatorSwitch() {
         translateSwitch.addTarget(self, action: #selector(self.stateChanged), for: UIControl.Event.valueChanged)
-        translateSwitch.onTintColor = Constants.americanViolet
+        translateSwitch.onTintColor = Constants.customColors.americanViolet
     }
     
-    @objc func stateChanged(mySwitch: UISwitch) {
+    @objc func stateChanged() {
         if (translateSwitch.isOn) {
-            presenter?.startMartianTranslation(articleText: articleModel!.body)
-            articleTextView.text = self.articleTranslatedText
+            presenter?.startMartianTranslation(articleModel: articleModel!)
+            articleTextView.text = translatedArticleModel?.body
+            articleTitle.text = translatedArticleModel?.title
         } else {
+            articleTitle.text = articleModel?.title
             articleTextView.text = articleModel?.body
         }
     }
     
     func setLeftButtonBarItem() {
-        let image = UIImage(named: "backBtn")!.withTintColor(Constants.americanViolet, renderingMode: .alwaysOriginal)
+        let image = UIImage(named: "backBtn")!.withTintColor(Constants.customColors.americanViolet, renderingMode: .alwaysOriginal)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style:.plain, target: self, action:  #selector(goBack(sender:)))
     }
     

@@ -14,6 +14,6 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var articleTitle: UILabel!
     
     override func awakeFromNib() {
-        articleTitle.textColor = Constants.gold
+        articleTitle.textColor = Constants.customColors.gold
     }
 }

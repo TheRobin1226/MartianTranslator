@@ -12,43 +12,44 @@ class ArticleInteractor: ArticleInteractorInputProtocol {
     
     var presenter: ArticleInteractorOutputProtocol?
     
-    func fetchMartianTranslation(articleText: String) {
-        let c = Set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'")
-        let articleCharsArray = Array(articleText)
+    func fetchMartianTranslation(articleModel: ArticleModel) {
+        presenter?.articleTranslationSuccess(articleModel: ArticleModel(body: fetchTranslated(text: articleModel.body),
+                                                                        title: fetchTranslated(text: articleModel.title),
+                                                                        topImage: articleModel.topImage))
+    }
+    
+    func fetchTranslated(text: String) -> String {
+        let charsArray = Array(text)
+        
         var tempWord = ""
         var tempTranslatedText = ""
-        for char in articleCharsArray {
-            if c.contains(char) {
+        
+        for char in charsArray {
+            if Constants.charSets.charSetPlusApostrophe.contains(char) {
                 tempWord.append(char)
             } else if char == " " {
-                tempTranslatedText.append(self.translateWord(word: tempWord))
+                tempTranslatedText.append(translateWord(word: tempWord))
                 tempWord = ""
                 tempTranslatedText.append(" ")
             } else {
-                tempTranslatedText.append(self.translateWord(word: tempWord))
+                tempTranslatedText.append(translateWord(word: tempWord))
                 tempWord = ""
                 tempTranslatedText.append(char)
             }
         }
         
-        presenter?.articlesTranslationSuccess(articleTranslatedText: tempTranslatedText)
+        tempTranslatedText.append(translateWord(word: tempWord))
+        return tempTranslatedText
     }
-
-}
-
-// MARK: - Private
-private extension ArticleInteractor {
+    
     func translateWord(word: String) -> String {
-        let charSet = Set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
-        let upperCaseSet = Set("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-        
-        let charCount = word.filter({charSet.contains($0)}).count
-        let upperCaseCount = word.filter({upperCaseSet.contains($0)}).count
+        let charCount = word.filter({Constants.charSets.charSet.contains($0)}).count
+        let upperCaseCount = word.filter({Constants.charSets.upperCaseSet.contains($0)}).count
         let numbersRange = word.rangeOfCharacter(from: .decimalDigits)
         
         if charCount > 3 {
             return upperLowerBoinga(word: word, charCount: charCount, upperCaseCount: upperCaseCount)
-        } else if numbersRange != nil && charCount > 1 {
+        } else if numbersRange != nil && charCount > 0 {
             return upperLowerBoinga(word: word, charCount: charCount, upperCaseCount: upperCaseCount)
         } else {
             return word
@@ -57,11 +58,11 @@ private extension ArticleInteractor {
     
     func upperLowerBoinga(word: String, charCount: Int, upperCaseCount: Int) -> String {
         if upperCaseCount == charCount {
-            return "BOINGA"
+            return Constants.boingaVariations.upperCaseBoinga
         } else if word.first!.isUppercase {
-            return "Boinga"
+            return Constants.boingaVariations.firstLetterUpperCaseBoinga
         } else {
-            return "boinga"
+            return Constants.boingaVariations.lowerCaseboinga
         }
     }
 }

@@ -27,6 +27,6 @@ class ArticleRouter: ArticleRouterProtocol {
     }
     
     func goBack(navigationController: UINavigationController) {
-        NavigationHelper.sharedInstance.goBack(navigationController: navigationController, animated: true)
+        NavigationHelper.goBack(navigationController: navigationController, animated: true)
     }
 }

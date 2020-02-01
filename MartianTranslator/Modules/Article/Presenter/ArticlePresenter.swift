@@ -21,11 +21,11 @@ class ArticlePresenter: ArticlePresenterProtocol, ArticleInteractorOutputProtoco
         router?.goBack(navigationController: navigationController)
     }
     
-    func articlesTranslationSuccess(articleTranslatedText: String) {
-        view?.presentArticleTranslation(articleTranslatedText: articleTranslatedText)
+    func articleTranslationSuccess(articleModel: ArticleModel) {
+        view?.presentArticleTranslation(articleModel: articleModel)
     }
     
-    func startMartianTranslation(articleText: String) {
-        interactor?.fetchMartianTranslation(articleText: articleText)
+    func startMartianTranslation(articleModel: ArticleModel) {
+        interactor?.fetchMartianTranslation(articleModel: articleModel)
     }
 }

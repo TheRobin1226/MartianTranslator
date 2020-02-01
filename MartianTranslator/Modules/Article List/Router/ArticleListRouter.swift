@@ -25,11 +25,11 @@ class ArticleListRouter: ArticleListRouterProtocol {
         interactor.presenter = presenter
         
         let viewController = view as! ArticleListViewController
-        NavigationHelper.sharedInstance.setRootViewController(withViewController: viewController)
+        NavigationHelper.setRootViewController(withViewController: viewController)
     }
     
     func presentArticleModule(navigationController: UINavigationController, articleModel: ArticleModel) {
         let articleViewController = ArticleRouter.createArticleModule(articleModel: articleModel)
-        NavigationHelper.sharedInstance.pushViewController(navigationController: navigationController, viewController: articleViewController, animated: true)
+        NavigationHelper.pushViewController(navigationController: navigationController, viewController: articleViewController, animated: true)
     }
 }

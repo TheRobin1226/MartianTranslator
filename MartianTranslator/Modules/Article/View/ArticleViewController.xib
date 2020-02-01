@@ -12,8 +12,8 @@
                 <outlet property="articleImageView" destination="qEK-mH-ifO" id="bv6-4z-sBC"/>
                 <outlet property="articleTextView" destination="Rx9-Do-wW2" id="kjM-xx-L9b"/>
                 <outlet property="articleTitle" destination="oJW-KB-BAz" id="UfM-eU-ql2"/>
+                <outlet property="translateLabel" destination="VSt-sQ-oBg" id="jGa-tc-5zE"/>
                 <outlet property="translateSwitch" destination="wKB-ps-hsO" id="7tr-yR-NXD"/>
-                <outlet property="translateText" destination="VSt-sQ-oBg" id="BwA-vV-Yyh"/>
                 <outlet property="view" destination="DoC-ld-rOx" id="IkI-ZY-CH5"/>
             </connections>
         </placeholder>

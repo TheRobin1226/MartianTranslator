@@ -10,34 +10,22 @@ import UIKit
 
 class NavigationHelper {
     
-    static let sharedInstance = NavigationHelper()
-    
     private init () { }
     
-    func setRootViewController(withViewController: UIViewController) {
+    static func setRootViewController(withViewController: UIViewController) {
         let navigationController = UINavigationController(rootViewController: withViewController)
-        setNavigationBarAttributes(navigationController: navigationController)
+        navigationController.navigationItem.hidesBackButton = true
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
         appDelegate.window?.rootViewController = navigationController
         appDelegate.window?.makeKeyAndVisible()
     }
     
-    func pushViewController(navigationController: UINavigationController, viewController: UIViewController, animated: Bool) {
+    static func pushViewController(navigationController: UINavigationController, viewController: UIViewController, animated: Bool) {
         navigationController.pushViewController(viewController, animated: animated)
     }
     
-    func goBack(navigationController: UINavigationController, animated: Bool) {
+    static func goBack(navigationController: UINavigationController, animated: Bool) {
         navigationController.popViewController(animated: animated)
-    }
-}
-
-// MARK: - Private
-private extension NavigationHelper {
-    func setNavigationBarAttributes(navigationController: UINavigationController) {
-        navigationController.navigationItem.backBarButtonItem?.title = ""
-        navigationController.navigationBar.barTintColor = .black
-        navigationController.navigationBar.tintColor = .white
-        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
     }
 }

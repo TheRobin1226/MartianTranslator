@@ -19,15 +19,15 @@ final class ArticleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "The Alien Times"
-        self.view.backgroundColor = Constants.americanViolet
+        self.view.backgroundColor = Constants.customColors.americanViolet
         presenter?.startFetchingArticles()
         setupArticleListTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.barTintColor = Constants.americanViolet
-        navigationController?.navigationBar.tintColor = Constants.americanViolet
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : Constants.gold]
+        navigationController?.navigationBar.barTintColor = Constants.customColors.americanViolet
+        navigationController?.navigationBar.tintColor = Constants.customColors.americanViolet
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : Constants.customColors.gold]
     }
     
     static func instantiate() -> ArticleListViewController {
